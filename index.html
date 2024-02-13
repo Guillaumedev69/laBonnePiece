@@ -2,8 +2,9 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>Les Bonnes Pièces</title>
+		<title>Bonnes Pièces</title>
 		<link rel="stylesheet" href="styles.css">
+		<script src="https://kit.fontawesome.com/87235acdc7.js" crossorigin="anonymous"></script>
 		<script type="module" src="pieces.js"></script>
 		<script type="module" src="pieces.js"></script>
 	</head>
@@ -22,6 +23,18 @@
 				<input type="range" name="filtrer-prix" id="filter-prix" min="0" max="60" value="30" step="5"><br>
 				<button class="btn-filtrer">Filtrer les pièces non abordables</button><br>
 				<button class="btn-filtrer-no-descri">Filtrer les pièces sans déscription</button>
+				<h3>Ajouter un avis</h3>
+				<form class="formulaire-avis">
+					Identifiant de la pièce :<br>
+					<input type="number" name="piece-id" min="1" max="5"><br>
+					Nom d'utilisateur :<br>
+					<input type="text" name="utilisateur"><br>
+					Avis :<br>
+					<input type="text" name="commentaire"><br>
+					Note <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i> sur <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i><i class="fa-xs fa-solid fa-star" aria-hidden="true"></i><i class="fa-xs fa-solid fa-star" aria-hidden="true"></i><i class="fa-xs fa-solid fa-star" aria-hidden="true"></i><i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>:<br>
+					<input type="number" name="nbEtoiles" min="1" max="5"><br><br>
+					<button>Envoyer</button>
+				</form>
 			</section>
 
 			<!-- Fiches produits -->
