@@ -5,6 +5,7 @@
 		<title>Les Bonnes Pièces</title>
 		<link rel="stylesheet" href="styles.css">
 		<script type="module" src="pieces.js"></script>
+		<script type="module" src="pieces.js"></script>
 	</head>
 	<body>
 		<header>
@@ -17,17 +18,20 @@
 				<h3>Filtres</h3>
 				<button class="btn-trier">Trier par prix croissant</button><br>
 				<button class="btn-trier-decroi">Trier par prix décroissant</button><br>
+				<p>Prix maximum:</p>
+				<input type="range" name="filtrer-prix" id="filter-prix" min="0" max="60" value="30" step="5"><br>
 				<button class="btn-filtrer">Filtrer les pièces non abordables</button><br>
-				<button class="btn-filtrer-san-descri">Filtrer les pièces sans déscription</button>
+				<button class="btn-filtrer-no-descri">Filtrer les pièces sans déscription</button>
 			</section>
 
 			<!-- Fiches produits -->
 			<section class="fiches">
+				<!-- Code ajouté-->
 				<div class="abordables">
-					<p>Pièces abordables :</p>
+					
 				</div>
 				<div class="disponibles">
-					<p>Pièces disponibles :</p>
+					
 				</div>
 			</section>
 		</main>
