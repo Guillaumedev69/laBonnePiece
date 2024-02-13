@@ -1,6 +1,6 @@
 import { ajoutListenerAvis } from "./avis.js";
 // Récupération des pièces depuis le fichier JSON
-const reponse = await fetch('pieces-autos.json');
+const reponse = await fetch("http://localhost:8081/pieces");
 const pieces = await reponse.json();
 
 function genererPieces(pieces){
@@ -33,6 +33,7 @@ function genererPieces(pieces){
         const avisBouton = document.createElement("button");
         avisBouton.dataset.id = article.id;
         avisBouton.textContent = "Afficher les avis";
+
 
         // On rattache la balise article a la section Fiches
         sectionFiches.appendChild(pieceElement);
