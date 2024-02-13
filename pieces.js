@@ -1,7 +1,9 @@
-import { ajoutListenerAvis } from "./avis.js";
+import { ajoutListenerAvis, ajoutListenerEnvoyerAvis } from "./avis.js";
 // Récupération des pièces depuis le fichier JSON
 const reponse = await fetch("http://localhost:8081/pieces");
 const pieces = await reponse.json();
+
+
 
 function genererPieces(pieces){
     for (let i = 0; i < pieces.length; i++) {
@@ -49,6 +51,7 @@ function genererPieces(pieces){
     
      }
      ajoutListenerAvis()
+     ajoutListenerEnvoyerAvis()
 }
 
 // Premier affichage de la page
@@ -114,4 +117,10 @@ boutonFiltrerPrix.addEventListener("input", function () {
     document.querySelector(".fiches").innerHTML = "";
     genererPieces(piecesFiltrees)
     console.log(piecesFiltrees)
+});
+
+fetch("/pieces/1/avis",{
+    method: "POST",
+    headers:{"Content-Type": "application/json"},
+    body: '{"commentaire": "Top produit !"}'
 });
