@@ -2,10 +2,9 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>Bonnes Pièces</title>
+		<title>Les Bonnes Pièces</title>
 		<link rel="stylesheet" href="styles.css">
 		<script src="https://kit.fontawesome.com/87235acdc7.js" crossorigin="anonymous"></script>
-		<script type="module" src="pieces.js"></script>
 		<script type="module" src="pieces.js"></script>
 	</head>
 	<body>
@@ -17,12 +16,16 @@
 			<!-- Menu de recherche -->
 			<section class="filtres">
 				<h3>Filtres</h3>
-				<button class="btn-trier">Trier par prix croissant</button><br>
-				<button class="btn-trier-decroi">Trier par prix décroissant</button><br>
+				<button class="btn-trier">Trier par prix croissant</button>
+				<br>
+				<button class="btn-filtrer">Filtrer les pièces non abordables</button>
+				<br>
+				<button class="btn-decroissant">Trier par prix décroissant</button>
+				<br>
+				<button class="btn-nodesc">Filtrer les pièces sans description</button>
+				<br>
 				<p>Prix maximum:</p>
-				<input type="range" name="filtrer-prix" id="filter-prix" min="0" max="60" value="30" step="5"><br>
-				<button class="btn-filtrer">Filtrer les pièces non abordables</button><br>
-				<button class="btn-filtrer-no-descri">Filtrer les pièces sans déscription</button>
+				<input type="range" name="prix-max" id="prix-max" min="0" max="60" step="5">
 				<h3>Ajouter un avis</h3>
 				<form class="formulaire-avis">
 					Identifiant de la pièce :<br>
@@ -31,20 +34,28 @@
 					<input type="text" name="utilisateur"><br>
 					Avis :<br>
 					<input type="text" name="commentaire"><br>
-					Note <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i> sur <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i><i class="fa-xs fa-solid fa-star" aria-hidden="true"></i><i class="fa-xs fa-solid fa-star" aria-hidden="true"></i><i class="fa-xs fa-solid fa-star" aria-hidden="true"></i><i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>:<br>
-					<input type="number" name="nbEtoiles" min="1" max="5"><br><br>
+					Note <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i> 
+					sur <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+					<i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+					<i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+					<i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+					<i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>:<br>
+					<input type="number" name="nbEtoiles" min="0" max="5"><br>
 					<button>Envoyer</button>
 				</form>
+				<!-- code à ajouter-->
+				<h3>Données</h3>
+				<button class="btn-maj">Mettre à jour les pièces</button>
 			</section>
 
 			<!-- Fiches produits -->
 			<section class="fiches">
-				<!-- Code ajouté-->
+				<!-- Code ajouté -->
 				<div class="abordables">
-					
+
 				</div>
 				<div class="disponibles">
-					
+
 				</div>
 			</section>
 		</main>
